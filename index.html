@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box model - CSS</title>
+    <link rel="stylesheet" href="box-model.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double+Ink:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shadows+Into+Light&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Box model u CSS-u</h1>
+
+    <p class="firstPar">
+      Svaki HTML element može da se predstavi kao kutija, bez obzira da li je
+      paragraf, naslov, dugme ili slika svaki element na veb stranici ima oblik
+      pravougaonika koji zauzima neki prostor.
+    </p>
+    <p>
+      Za pravilno razumevanja kako CSS funkcioniše važno je razumeti sve slojeve
+      od koji se sastoji taj pravougaonik koji čini CSS box model, jer se na taj
+      način računa prostor koji element zauzima na stranici.
+    </p>
+
+    <h3>Slojevi box modela</h3>
+    <dl>
+      <dt>Content - sadržaj</dt>
+      <dd>
+        To je mesto gde se nalazi tekst, slika ili bilo koji stvarni sadržaj
+        elementa.Tekst unutar paragrafa je sadržaj.
+      </dd>
+      <dt>Padding - unutrašnja margina</dt>
+      <dd>Ako se poveća padding, sadržaj se pomera od ivice ka unutra.</dd>
+      <dt>Border - ivica</dt>
+      <dd>
+        Okvir koji ide oko sadržaja. Možeš da ga vidiš, da mu daš boju, debljinu
+        i stil (puna linija, isprekidana, tačkasta...).
+      </dd>
+      <dt>Margin - spoljašnja margina</dt>
+      <dd>
+        To je prostor između kutije i drugih elemenata. Margina ne menja
+        veličinu kutije, već samo dodaje prostor oko nje.
+      </dd>
+    </dl>
+    <div class="box-model-img">
+      <img src="assets/box_model.png" alt="" />
+    </div>
+
+    <h3>Svojstvo CSS-a box-sizing</h3>
+
+    <p>Ovo svojstvo kontroliše kako će biti izračunate dimenzije elementa.</p>
+    <h3>Ovo svojstvo može imati sledeće vrednosti:</h3>
+    <ul>
+      <li>content-box</li>
+      <li>border-box</li>
+    </ul>
+    <table>
+      <tr>
+        <th>Vrednost svojstva</th>
+        <th>Opis</th>
+      </tr>
+      <tr>
+        <td>content-box</td>
+        <td>Visina i širina elementa se računaju bez paddinga i ivica</td>
+      </tr>
+      <tr>
+        <td>border-box</td>
+        <td>U ukupnu visinu i širinu elementa se računaju padding i ivice</td>
+      </tr>
+    </table>
+    <p class="secondPar">
+      Svojstvo border-box olakšava izradu layout-a stranice jer širina i visina
+      uključuju padding i veličinu same ivice, dok se sadržaj automatski
+      prilagođava tim dimenzijama.
+    </p>
+  </body>
+</html>
